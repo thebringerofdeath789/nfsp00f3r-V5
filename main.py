@@ -142,7 +142,6 @@ class MainWindow(QMainWindow):
         self.bluetooth_companion.message_received.connect(self._on_bt_message)
         self.relay.relay_status.connect(self.logger.log)
 
-    # SLOT METHODS (these MUST match UI expectations!)
     @pyqtSlot()
     def on_read_card(self):
         self.card_manager.read_current_card()

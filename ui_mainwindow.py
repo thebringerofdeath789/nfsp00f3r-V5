@@ -24,6 +24,7 @@
 #   - show_debug_window(logger)
 #   - _append_debug()
 #   - show_about_dialog()
+#   - update_magstripe_result(magstripe_data)
 # =====================================================================
 
 from PyQt5.QtWidgets import (
@@ -114,6 +115,14 @@ class MainWindowUI:
         self.left_layout.addWidget(self.card_detail_label)
         self.left_layout.addWidget(self.card_detail, 3)
 
+        # Magstripe Emulation Result
+        self.magstripe_label = QLabel("Magstripe Emulation Result")
+        self.magstripe_result = QTextEdit()
+        self.magstripe_result.setReadOnly(True)
+        self.magstripe_result.setFontPointSize(10)
+        self.left_layout.addWidget(self.magstripe_label)
+        self.left_layout.addWidget(self.magstripe_result, 2)
+
         # TLV Tree
         self.tlv_label = QLabel("TLV Data (Tree View)")
         self.tlv_tree = QTreeWidget()
@@ -170,6 +179,20 @@ class MainWindowUI:
 
     def clear_card_detail(self):
         self.card_detail.clear()
+
+    def update_magstripe_result(self, magstripe_data):
+        if not magstripe_data:
+            self.magstripe_result.clear()
+            return
+        text = (
+            f"PAN: {magstripe_data.get('PAN','')}\n"
+            f"Expiry: {magstripe_data.get('Expiry','')}\n"
+            f"Service Code: {magstripe_data.get('ServiceCode','')}\n"
+            f"Discretionary Data: {magstripe_data.get('DiscretionaryData','')}\n"
+            f"ARQC: {magstripe_data.get('ARQC','')}\n"
+            f"ARPC: {magstripe_data.get('ARPC','')}\n"
+        )
+        self.magstripe_result.setPlainText(text)
 
     def update_tlv_tree(self, tlv_tree):
         def make_item(node):
