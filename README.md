@@ -1,7 +1,7 @@
 # nfsp00f3r V4.04 - EMV Terminal & Card Manager with Companion
 
 **Author:** Gregory King  
-**Project Homepage:** https://r00t3d.net  
+**Presented by:** https://r00t3d.net  
 **GitHub:** https://github.com/thebringerofdeath789  
 
 ---
