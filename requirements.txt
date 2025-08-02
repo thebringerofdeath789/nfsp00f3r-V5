@@ -1,0 +1,22 @@
+# Qt bindings
+PyQt5>=5.15
+
+# Smart-card & NFC
+pyscard>=1.9.7
+nfcpy>=1.0
+
+# Cryptography & JSON schema validation
+cryptography>=3.4
+jsonschema>=3.2
+
+# Bluetooth Classic (RFCOMM) on Linux/macOS
+PyBluez>=0.23; sys_platform != 'win32'
+
+# Bluetooth (BLE) fallback on Windows
+bleak>=0.20.0; sys_platform == 'win32'
+
+# Date utilities
+python-dateutil>=2.8
+
+# USB-serial support (optional for some PN532 setups)
+pyserial>=3.4

@@ -1,0 +1,260 @@
+﻿# =====================================================================
+# File: emvcard.py
+# Project: nfsp00f3r V4.04 - EMV Terminal & Card Manager with Companion
+# Author: Gregory King
+# Date: 2025-08-01
+#
+# Description:
+#   EMVCard object: handles multi‐application parsing, proper
+#   GPO/PDOL/AFL flows, TLV extraction, track decode,
+#   transaction history, crypto key extraction, and full profile.
+#
+# Functions:
+#   - EMVCard(source)
+#       - parse_card()
+#       - select_ppse()
+#       - get_applications_from_ppse()
+#       - select_application(aid)
+#       - read_sfi_records(sfi)
+#       - parse_tlv_records(records)
+#       - extract_tag(tag)
+#       - extract_tracks()
+#       - extract_transactions()
+#       - get_cardholder_info()
+#       - get_tlv_tree()
+#       - export_profile()
+#       - import_profile_json(profile_json)
+#       - reparse()
+#       - send_apdu(apdu_bytes)
+# =====================================================================
+
+import json
+from tlv import TLVParser
+from tag_dict import TagDict
+from aid_list import AidList
+from pdol import build_pdol
+from history_parser import parse_log_entries
+from emv_crypto_keys import EmvCryptoKeys
+
+SELECT_PPSE = bytes.fromhex('00A404000E325041592E5359532E4444463031')  # '2PAY.SYS.DDF01'
+SELECT_AID = lambda aid: bytes.fromhex('00A40400') + bytes([len(aid)//2]) + bytes.fromhex(aid)
+READ_RECORD = lambda sfi, rec: bytes.fromhex(f"00B2{rec:02X}{(sfi << 3) | 4:02X}00")
+
+class EMVCard:
+    def __init__(self, source):
+        self.source = source
+        self.tag_dict = TagDict()
+        self.tlv_parser = TLVParser(self.tag_dict)
+        self.raw_bytes = b""
+        self.applications = []     # List of dicts per AID
+        self.tlv_tree = []         # Aggregate for UI
+        if isinstance(source, dict):
+            self.load_from_profile(source)
+        else:
+            self.parse_card()
+
+    def parse_card(self):
+        """
+        Full multi-application parse:
+        1. SELECT PPSE (or fallback AidList)
+        2. For each AID:
+            a. SELECT AID
+            b. Parse FCI TLVs (incl. PDOL)
+            c. Build PDOL and GET PROCESSING OPTIONS
+            d. Extract AIP, AFL
+            e. Read records per AFL
+            f. Parse TLVs, extract fields, history, keys
+        """
+        self.applications = []
+        self.tlv_tree = []
+
+        # 1. SELECT PPSE
+        try:
+            ppse_resp = self.send_apdu(SELECT_PPSE)
+            ppse_tlvs = self.tlv_parser.parse(ppse_resp)
+            aids = self.get_applications_from_ppse(ppse_tlvs)
+        except Exception:
+            aids = []
+        if not aids:
+            aids = AidList().get_all()
+
+        # 2. Iterate every AID
+        for aid in aids:
+            try:
+                # a. SELECT AID
+                sel_resp = self.send_apdu(SELECT_AID(aid))
+                fci_tlvs = self.tlv_parser.parse(sel_resp)
+                label = self.extract_tag('50', fci_tlvs)
+
+                # b. PDOL
+                pdol_hex = self.extract_tag('9F38', fci_tlvs)
+                pdol_data = b''
+                if pdol_hex:
+                    pdol_template = bytes.fromhex(pdol_hex)
+                    term_data = {}  # fill terminal data as needed
+                    pdol_data = build_pdol(pdol_template, term_data)
+
+                # c. GET PROCESSING OPTIONS
+                cmd_data = b'\x83' + bytes([len(pdol_data)]) + pdol_data if pdol_data else b''
+                gpo_apdu = b'\x80\xa8\x00\x00' + bytes([len(cmd_data)+2]) + cmd_data + b'\x00'
+                gpo_resp = self.send_apdu(gpo_apdu)
+                gpo_tlvs = self.tlv_parser.parse(gpo_resp)
+
+                # d. Extract AIP (82) and AFL (94)
+                aip = bytes.fromhex(self.extract_tag('82', gpo_tlvs) or '')
+                afl = []
+                afl_raw = self.extract_tag('94', gpo_tlvs)
+                if afl_raw:
+                    data = bytes.fromhex(afl_raw)
+                    for i in range(0, len(data), 4):
+                        sfi  = data[i] >> 3
+                        first= data[i+1]
+                        last = data[i+2]
+                        offline = data[i+3]
+                        afl.append((sfi, first, last, offline))
+
+                # e. Read records per AFL
+                recs = []
+                for (sfi, first, last, _) in afl:
+                    for rec in range(first, last+1):
+                        rec_resp = self.send_apdu(READ_RECORD(sfi, rec))
+                        if rec_resp and rec_resp[-2:] == b'\x90\x00':
+                            recs.append(rec_resp)
+                tlvs = self.parse_tlv_records(recs)
+
+                # f. Extract fields & history & keys
+                pan        = self.extract_tag('5A', tlvs)
+                cardholder = self.extract_tag('5F20', tlvs)
+                expiry     = self.extract_tag('5F24', tlvs)
+                cvv        = self.extract_cvv(tlvs)
+                tracks     = self.extract_tracks(tlvs)
+                tx_history = parse_log_entries(self)
+                crypto_keys= EmvCryptoKeys().extract_keys_from_profile(self)
+
+                app = {
+                    'aid': aid,
+                    'label': label,
+                    'fci_tlvs': fci_tlvs,
+                    'gpo_tlvs': gpo_tlvs,
+                    'aip': aip,
+                    'afl': afl,
+                    'tlvs': tlvs,
+                    'pan': pan,
+                    'cardholder': cardholder,
+                    'expiry': expiry,
+                    'cvv': cvv,
+                    'tracks': tracks,
+                    'transactions': tx_history,
+                    'crypto_keys': crypto_keys
+                }
+                self.applications.append(app)
+
+            except Exception as e:
+                print(f"[EMVCard] AID {aid} parse error: {e}")
+                continue
+
+        # Aggregate TLV tree
+        for app in self.applications:
+            self.tlv_tree.extend(app['tlvs'])
+
+    def get_applications_from_ppse(self, ppse_tlvs):
+        aids = []
+        def walk(nodes):
+            for n in nodes:
+                if n['tag'] == '4F':
+                    aids.append(n['value'])
+                walk(n.get('children', []))
+        walk(ppse_tlvs)
+        return [aid for aid in set(aids) if aid]
+
+    def parse_tlv_records(self, records):
+        out = []
+        for rec in records:
+            try:
+                out.extend(self.tlv_parser.parse(rec))
+            except:
+                pass
+        return out
+
+    def extract_tag(self, tag, tlvs=None):
+        tlvs = tlvs if tlvs is not None else self.tlv_tree
+        for n in tlvs:
+            if n['tag'] == tag:
+                return n.get('value','')
+            v = self.extract_tag(tag, n.get('children',[]))
+            if v:
+                return v
+        return ""
+
+    def extract_cvv(self, tlvs):
+        v = self.extract_tag('57', tlvs) or self.extract_tag('9F6B', tlvs)
+        if ';' in v and '=' in v:
+            parts = v.split('=')
+            return parts[1][:3] if len(parts)>1 else ""
+        return ""
+
+    def extract_tracks(self, tlvs):
+        tracks = {}
+        for tag in ('57','9F6B'):
+            v = self.extract_tag(tag, tlvs)
+            if v:
+                tracks[tag] = v
+        return tracks
+
+    def extract_transactions(self, tlvs):
+        # Deprecated: use history_parser.parse_log_entries(self)
+        return []
+
+    def get_cardholder_info(self):
+        # Return first application’s info
+        if not self.applications:
+            return {}
+        app = self.applications[0]
+        return {
+            "PAN": app['pan'],
+            "Cardholder": app['cardholder'],
+            "Expiry": app['expiry'],
+            "CVV": app['cvv']
+        }
+
+    def get_tlv_tree(self):
+        return self.tlv_tree
+
+    def export_profile(self):
+        # Export aggregated profile for all apps
+        data = {
+            'applications': self.applications
+        }
+        return json.dumps(data, indent=2)
+
+    @staticmethod
+    def import_profile_json(profile_json):
+        d = json.loads(profile_json) if isinstance(profile_json,str) else profile_json
+        return EMVCard(d)
+
+    def load_from_profile(self, d):
+        # Simplified loader
+        self.applications = d.get('applications',[])
+        self.tlv_tree = [tlv for app in self.applications for tlv in app.get('tlvs',[])]
+        if self.applications:
+            a = self.applications[0]
+            self.pan = a.get('pan','')
+            self.cardholder = a.get('cardholder','')
+            self.expiry = a.get('expiry','')
+            self.cvv = a.get('cvv','')
+
+    def reparse(self):
+        self.parse_card()
+
+    def send_apdu(self, apdu_bytes):
+        try:
+            if hasattr(self.source, 'transmit'):
+                resp, sw1, sw2 = self.source.transmit(list(apdu_bytes))
+                return bytes(resp+[sw1,sw2])
+            elif hasattr(self.source, 'transceive'):
+                return self.source.transceive(bytes(apdu_bytes))
+            elif hasattr(self.source, 'send_apdu'):
+                return self.source.send_apdu(apdu_bytes)
+        except Exception as e:
+            print(f"[EMVCard] send_apdu error: {e}")
+        return b""

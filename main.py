@@ -1,0 +1,298 @@
+# =====================================================================
+# File: main.py
+# Project: nfsp00f3r V4.04 - EMV Terminal & Card Manager with Companion
+# Author: Gregory King
+# Date: 2025-08-01
+# =====================================================================
+
+import sys
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QAction, QFileDialog, QMessageBox
+)
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import pyqtSlot
+
+from ui_mainwindow import MainWindowUI
+from cardmanager import CardManager
+from cardreader_pcsc import PCSCCardReader
+from cardreader_pn532 import PN532Reader
+from cardreader_bluetooth import BluetoothCompanion
+from emv_crypto import EmvCrypto
+from magstripe import MagstripeEmulator
+from relay import RelayManager
+from export_import import ProfileExporter
+from pin_manager import PinManager
+from theme import ThemeManager
+from logger import Logger
+from utils import resource_path, app_version
+from settings import SettingsManager
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        # Window/meta
+        self.setWindowTitle("nfsp00f3r V4.04 - EMV Terminal & Card Manager")
+        self.setWindowIcon(QIcon(resource_path('icons/nfsp00f3r.png')))
+        self.resize(1200, 800)
+        self.setMinimumSize(900, 600)
+
+        # Managers and modules
+        self.settings            = SettingsManager()
+        self.theme               = ThemeManager(self.settings)
+        self.logger              = Logger()
+        self.card_manager        = CardManager(self.logger)
+        self.pcsc_reader         = PCSCCardReader(self.card_manager)
+        self.pn532_reader        = PN532Reader(self.card_manager)
+        self.bluetooth_companion = BluetoothCompanion(self.card_manager)
+        self.crypto              = EmvCrypto()
+        self.magstripe           = MagstripeEmulator()
+        self.relay               = RelayManager(self.card_manager, self.bluetooth_companion)
+        self.exporter            = ProfileExporter()
+        self.pin_manager         = PinManager()
+        self.ui                  = MainWindowUI(self)
+
+        # UI setup and event wiring
+        self.setup_ui()
+        self.setup_menu()
+        self.setup_signals()
+        self.theme.apply_theme(self)
+        self.statusBar().showMessage(f"nfsp00f3r V4.04 | {app_version()}")
+
+        # Start readers and Bluetooth companion
+        self.pcsc_reader.start_monitoring()
+        self.pn532_reader.start_monitoring()
+        self.bluetooth_companion.start_server()
+
+    def setup_ui(self):
+        self.ui.build_layout(self)
+        self.setCentralWidget(self.ui.main_widget)
+        self.update_card_views()
+        self.update_apdu_log()
+
+    def setup_menu(self):
+        menubar = self.menuBar()
+        file_menu = menubar.addMenu('&File')
+        import_action = QAction('Import Card', self)
+        export_action = QAction('Export Card', self)
+        quit_action = QAction('Quit', self)
+        file_menu.addAction(import_action)
+        file_menu.addAction(export_action)
+        file_menu.addSeparator()
+        file_menu.addAction(quit_action)
+
+        tools_menu = menubar.addMenu('&Tools')
+        run_trx_action = QAction('Run Transaction', self)
+        magstripe_action = QAction('Emulate Magstripe', self)
+        replay_magstripe_action = QAction('Replay Magstripe', self)
+        randomize_pan_action = QAction('Randomize PAN', self)
+        verify_pin_action = QAction('Offline PIN Verify', self)
+        reset_pin_action = QAction('Reset PIN Counter', self)
+        tools_menu.addActions([
+            run_trx_action, magstripe_action, replay_magstripe_action,
+            randomize_pan_action, verify_pin_action, reset_pin_action
+        ])
+
+        companion_menu = menubar.addMenu('&Phone/Companion')
+        sync_to_action     = QAction('Sync to Phone', self)
+        sync_from_action   = QAction('Sync from Phone', self)
+        start_relay_action = QAction('Start Relay', self)
+        stop_relay_action  = QAction('Stop Relay', self)
+        companion_menu.addActions([sync_to_action, sync_from_action])
+        companion_menu.addSeparator()
+        companion_menu.addActions([start_relay_action, stop_relay_action])
+
+        view_menu    = menubar.addMenu('&View')
+        debug_action = QAction('Open Debug Window', self)
+        theme_action = QAction('Toggle Dark/Light Theme', self)
+        view_menu.addActions([debug_action, theme_action])
+
+        # Help menu and About dialog integration
+        help_menu = menubar.addMenu('&Help')
+        about_action = QAction('About', self)
+        help_menu.addAction(about_action)
+        about_action.triggered.connect(self.ui.show_about_dialog)
+
+        # Connect menu actions
+        import_action.triggered.connect(self.on_import_card)
+        export_action.triggered.connect(self.on_export_card)
+        quit_action.triggered.connect(self.close)
+        run_trx_action.triggered.connect(self.on_run_transaction)
+        magstripe_action.triggered.connect(self.on_emulate_magstripe)
+        replay_magstripe_action.triggered.connect(self.on_replay_magstripe)
+        randomize_pan_action.triggered.connect(self.on_randomize_pan)
+        verify_pin_action.triggered.connect(self.on_verify_pin)
+        reset_pin_action.triggered.connect(self.on_reset_pin_counter)
+        sync_to_action.triggered.connect(self.on_sync_to_phone)
+        sync_from_action.triggered.connect(self.on_sync_from_phone)
+        start_relay_action.triggered.connect(self.on_start_relay)
+        stop_relay_action.triggered.connect(self.on_stop_relay)
+        debug_action.triggered.connect(self.on_show_debug)
+        theme_action.triggered.connect(self.on_switch_theme)
+
+    def setup_signals(self):
+        self.card_manager.card_inserted.connect(self.on_card_inserted)
+        self.card_manager.card_removed.connect(self.on_card_removed)
+        self.card_manager.card_switched.connect(self.update_card_views)
+        self.card_manager.cards_updated.connect(self.update_card_views)
+        self.card_manager.apdu_log_updated.connect(
+            lambda: self.ui.update_apdu_log(self.card_manager.get_apdu_log())
+        )
+        self.logger.log_updated.connect(lambda: self.ui._append_debug())
+        self.bluetooth_companion.sync_status.connect(self.logger.log)
+        self.bluetooth_companion.message_received.connect(self._on_bt_message)
+        self.relay.relay_status.connect(self.logger.log)
+
+    # SLOT METHODS (these MUST match UI expectations!)
+    @pyqtSlot()
+    def on_read_card(self):
+        self.card_manager.read_current_card()
+        self.update_card_views()
+
+    @pyqtSlot()
+    def on_export_card(self):
+        filename, _ = QFileDialog.getSaveFileName(self, "Export Card Profile", "", "JSON Files (*.json)")
+        if filename:
+            self.exporter.export(self.card_manager.get_current_card(), filename)
+            QMessageBox.information(self, "Export", "Card profile exported.")
+
+    @pyqtSlot()
+    def on_import_card(self):
+        filename, _ = QFileDialog.getOpenFileName(self, "Import Card Profile", "", "JSON Files (*.json)")
+        if filename:
+            card = self.exporter.import_profile(filename)
+            if card:
+                self.card_manager.add_card(card)
+                QMessageBox.information(self, "Import", "Card profile imported.")
+
+    @pyqtSlot()
+    def on_run_transaction(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            if hasattr(self.crypto, "run_transaction"):
+                result = self.crypto.run_transaction(card)
+                QMessageBox.information(self, "Transaction", f"Result:\n{result}")
+            else:
+                QMessageBox.warning(self, "Transaction", "Transaction logic is not implemented in EmvCrypto.")
+            self.update_card_views()
+
+    @pyqtSlot()
+    def on_emulate_magstripe(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            self.magstripe.emulate(card)
+            QMessageBox.information(self, "Magstripe", "Emulation started.")
+
+    @pyqtSlot()
+    def on_replay_magstripe(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            result = self.magstripe.replay(card)
+            if isinstance(result, str):
+                QMessageBox.information(self, "Replay Magstripe", result)
+            elif isinstance(result, dict):
+                summary = "\n".join(f"{k}: {v}" for k, v in result.items())
+                QMessageBox.information(self, "Replay Magstripe", summary)
+            else:
+                QMessageBox.information(self, "Replay Magstripe", "Replay complete. Check the debug log for details.")
+        else:
+            QMessageBox.warning(self, "Replay Magstripe", "No card selected.")
+
+    @pyqtSlot()
+    def on_randomize_pan(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            card.randomize_pan()
+            self.update_card_views()
+            QMessageBox.information(self, "Randomize PAN", "PAN randomized.")
+
+    @pyqtSlot()
+    def on_verify_pin(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            result = self.pin_manager.verify_pin(card)
+            QMessageBox.information(self, "PIN Verify", result)
+
+    @pyqtSlot()
+    def on_reset_pin_counter(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            result = self.pin_manager.reset_pin_counter(card)
+            QMessageBox.information(self, "Reset PIN Counter", result)
+
+    @pyqtSlot()
+    def on_switch_theme(self):
+        self.theme.toggle_theme()
+        self.theme.apply_theme(self)
+
+    @pyqtSlot()
+    def on_show_debug(self):
+        self.ui.show_debug_window(self.logger)
+
+    @pyqtSlot()
+    def on_start_relay(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            self.relay.start_relay(card)
+            QMessageBox.information(self, "Relay", "Relay started.")
+
+    @pyqtSlot()
+    def on_stop_relay(self):
+        self.relay.stop_relay()
+        QMessageBox.information(self, "Relay", "Relay stopped.")
+
+    @pyqtSlot()
+    def on_sync_to_phone(self):
+        card = self.card_manager.get_current_card()
+        if card:
+            profile = self.exporter.export_to_string(card)
+            self.bluetooth_companion.send_message({"cmd": "profile", "profile": profile})
+            QMessageBox.information(self, "Sync", "Sent profile to phone.")
+
+    @pyqtSlot(dict)
+    def _on_bt_message(self, msg):
+        if msg.get("cmd") == "profile":
+            card = self.exporter.import_from_string(msg["profile"])
+            if card:
+                self.card_manager.add_card(card)
+                QMessageBox.information(self, "Sync", "Received profile from phone.")
+
+    @pyqtSlot()
+    def on_sync_from_phone(self):
+        # Handled via message_received signal
+        pass
+
+    @pyqtSlot(object)
+    def on_card_inserted(self, card):
+        pan = card.get_cardholder_info().get('PAN','')
+        if not pan or pan.startswith("NO_PAN"):
+            self.logger.log(f"Card inserted: [NO PAN] (check tracks/tlvs for PAN)")
+        else:
+            self.logger.log(f"Card inserted: {pan}")
+        self.update_card_views()
+
+    @pyqtSlot()
+    def on_card_removed(self):
+        self.logger.log("Card removed")
+        self.update_card_views()
+
+    def update_card_views(self):
+        self.ui.update_card_list(self.card_manager.list_all_cards())
+        card = self.card_manager.get_current_card()
+        if card:
+            self.ui.update_card_detail(card)
+            self.ui.update_tlv_tree(card.get_tlv_tree())
+        else:
+            self.ui.clear_card_detail()
+            self.ui.clear_tlv_tree()
+
+    def update_apdu_log(self):
+        self.ui.update_apdu_log(self.card_manager.get_apdu_log())
+
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
