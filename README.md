@@ -72,15 +72,15 @@ The project ports and integrates core logic from best-in-class open-source EMV, 
 ### Setup
 1. Clone the repository:
 
-git clone https://github.com/thebringerofdeath789/nfsp00f3r.git
-cd nfsp00f3r
+ - git clone https://github.com/thebringerofdeath789/nfsp00f3r.git
+ - cd nfsp00f3r
 
 2. Install dependencies:
-pip install -r requirements.txt
+ - pip install -r requirements.txt
 
-## Copy
-3. Connect your PCSC or PN532 reader.
-4. Run the application:
+3. Run:
+ - python main.py
+ - 
 
 ## Usage
 
