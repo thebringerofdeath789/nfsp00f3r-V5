@@ -1,0 +1,20 @@
+// Consolidated root buildscript: single AGP + Kotlin plugin declaration.
+// Chosen AGP: 8.4.0 (aligns with modern Compose/Kotlin tooling).
+// Kotlin plugin pinned at 1.9.10.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.4.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

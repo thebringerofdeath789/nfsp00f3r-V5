@@ -1,0 +1,15 @@
+/.gradle/
+/build/
+/app/build/
+/local.properties
+## Keep Gradle wrapper files tracked so contributors and CI can run the
+## wrapper (`./gradlew` / `gradlew.bat`) reliably on all platforms.
+## The upstream import intentionally excluded the wrapper JAR; allowing the
+## wrapper to be tracked makes local Windows builds (and CI) straightforward.
+
+# Ignore vendored Gradle distributions (large binary artifacts)
+gradle-*.zip
+## Ignore extracted Gradle distribution and helper folders
+gradle-dist/
+gradle-*/
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Host APDU service descriptor for EnhancedHceService.
+  Contains the list of AIDs the HCE service will claim. Replace or extend
+  the <aid-filter> entries with the AIDs required for your test profiles.
+-->
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/hce_service_description"
+    android:requireDeviceUnlock="false">
+
+  <!-- Comprehensive AID list (sourced from `universal_emv_parser.py` US_CARD_AIDS) -->
+  <!-- Visa family -->
+  <aid-filter android:name="A0000000031010" />
+  <aid-filter android:name="A0000000032010" />
+  <aid-filter android:name="A0000000033010" />
+  <aid-filter android:name="A0000000034010" />
+  <aid-filter android:name="A0000000035010" />
+  <aid-filter android:name="A0000000036010" />
+  <aid-filter android:name="A0000000038010" />
+  <aid-filter android:name="A0000000041010" />
+  <aid-filter android:name="A0000000043060" />
+  <aid-filter android:name="A00000000980" />
+  <aid-filter android:name="A0000000980840" />
+
+  <!-- Mastercard family -->
+  <aid-filter android:name="A0000000041010" />
+  <aid-filter android:name="A0000000042010" />
+  <aid-filter android:name="A0000000043010" />
+  <aid-filter android:name="A0000000044010" />
+  <aid-filter android:name="A0000000045010" />
+  <aid-filter android:name="A0000000046000" />
+  <aid-filter android:name="A0000000050001" />
+  <aid-filter android:name="A0000000050002" />
+  <aid-filter android:name="A00000000401" />
+  <aid-filter android:name="A000000004" />
+  <aid-filter android:name="A0000000980840" />
+
+  <!-- American Express family -->
+  <aid-filter android:name="A000000025" />
+  <aid-filter android:name="A0000000250000" />
+  <aid-filter android:name="A000000025010104" />
+  <aid-filter android:name="A000000025010701" />
+  <aid-filter android:name="A000000025010801" />
+
+  <!-- Discover / Diners / Others -->
+  <aid-filter android:name="A0000001523010" />
+  <aid-filter android:name="A0000001524010" />
+  <aid-filter android:name="A00000015290" />
+  <aid-filter android:name="A0000000651010" />
+  <aid-filter android:name="A0000001544442" />
+  <aid-filter android:name="A0000000980848" />
+
+  <!-- Generic / Fallback AIDs -->
+  <aid-filter android:name="A000000003" />
+  <aid-filter android:name="A000000004" />
+  <aid-filter android:name="A000000025" />
+
+    <!--
+      Add additional <aid-filter android:name="AID_HEX" /> entries here.
+      AIDs must be provided as hexadecimal strings without spaces.
+    -->
+</host-apdu-service>

@@ -1,0 +1,91 @@
+project_name: nfsp00f3r-V5
+package: com.nf-sp00f.app
+version: 0.1.0
+
+# Feature extraction from README.md
+features:
+  core_modules:
+    - EMV Card Reading Engine (NfcCardReaderWithWorkflows)
+    - HCE Emulation System (EnhancedHceService + EmvAttackEmulationManager)
+    - 5 Attack Profiles (PPSE, AIP, Track2, Cryptogram, CVM)
+    - Material3 UI (5 Compose fragments)
+    - CardProfileManager (singleton with CRUD)
+
+  data_models:
+    - EmvCardData (70+ EMV tags, TLV parsing)
+    - ApduLogEntry (command/response logging)
+    - CardProfile (persistent storage)
+
+  emv_workflows:
+    - Standard Contactless (TTQ 27000000)
+    - Offline Forced (2F000000)
+    - CVM Required (67000000)
+    - Issuer Auth Path (A7000000)
+    - Enhanced Discovery (FF800000)
+    - Custom Research (user-defined)
+
+  ui_components:
+    - DashboardFragment (cards overview, stats)
+    - CardReadingFragment (NFC reading, APDU logs)
+    - EmulationFragment (HCE profiles, attack selection)
+    - CardDatabaseFragment (CRUD operations)
+    - AnalysisFragment (TLV browser, cryptogram analysis)
+
+# Batching strategy (max 4-5 atomic tasks per batch)
+batches:
+  batch_1:
+    name: "Foundation Setup"
+    tasks:
+      - Create project structure and directories
+      - Generate automation scripts
+      - Setup VSCode tasks and launch configs
+      - Create manifest files
+
+  batch_2:
+    name: "EMV Data Models"
+    tasks:
+      - Implement EmvCardData with all 70+ EMV tags
+      - Create ApduLogEntry for logging
+      - Build CardProfile with persistence
+      - Add TLV parsing utilities
+
+  batch_3:
+    name: "NFC Reading Engine"
+    tasks:
+      - Build NfcCardReaderWithWorkflows
+      - Implement dynamic PDOL/CDOL construction
+      - Add BER-TLV parsing with payneteasy library
+      - Create EMV workflow presets
+
+  batch_4:
+    name: "HCE Emulation System"
+    tasks:
+      - Create EnhancedHceService
+      - Build EmvAttackEmulationManager
+      - Implement 5 EmulationProfiles
+      - Add attack validation and safety checks
+
+  batch_5:
+    name: "UI Implementation"
+    tasks:
+      - Create 5 Material3 Compose fragments
+      - Implement CardProfileManager singleton
+      - Add real-time APDU logging UI
+      - Create professional security research theme
+
+dependencies:
+  android:
+    - androidx.compose.material3
+    - androidx.navigation.compose
+    - androidx.lifecycle.viewmodel-compose
+  emv:
+    - com.payneteasy:ber-tlv:1.0-11
+  logging:
+    - com.jakewharton.timber:timber
+
+quality_gates:
+  - Zero file corruption (DELETE→REGENERATE protocol)
+  - No safe-call operators in production Kotlin
+  - BUILD SUCCESSFUL requirement for task completion
+  - Production-grade code standards
+  - Naming convention enforcement

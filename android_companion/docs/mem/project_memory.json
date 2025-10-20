@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "name": "nf-sp00f",
+    "package": "com.nf_sp00f.app",
+    "purpose": "Advanced EMV security research platform for Android 14+",
+    "platform": "Android 14+, Kotlin, Jetpack Compose Material3, Min SDK 28",
+    "github_repo": "https://github.com/thebringerofdeath789/nfsp00f3r-V5.git",
+    "last_sync": "2025-09-30T23:00:00Z",
+    "build_status": "SUCCESS (local build verified)",
+    "code_health": "active-development",
+    "git_status": "merged-with-upstream-changes",
+    "deployment_ready": false,
+    "version": "v0.9.x",
+    "package_migration": "com.example.nfsp00f → com.nf_sp00f.app (completed)",
+    "notes": "Device-level validation (BLE/HCE/PN532) and CI device runs are pending."
+  },
+  "technical_stack": {
+    "android_version": "Target API 34 (Android 14+)",
+    "min_sdk": 28,
+    "language": "Kotlin",
+    "ui_framework": "Jetpack Compose Material3",
+    "nfc": "IsoDep for card reading, HostApduService for HCE",
+    "build_system": "Gradle (wrapper pinned)",
+    "jdk": "AdoptOpenJDK 17",
+    "sdk": "Android SDK (local dev machines)"
+  },
+  "current_status": {
+    "completed_local_work": [
+      "5-screen Android UI scaffold (Compose)",
+      "Package migration to com.nf_sp00f.app",
+      "Core HCE service (EnhancedHceService.kt) implemented",
+      "On-disk CardProfileManager (JSON) implemented",
+      "BLE message fragment manager (MessageFragmentManager.kt) with JVM unit tests",
+      "Peripheral BLE GATT server (BleConnectionManager.kt) implemented (requires device verification)",
+      "Apdu/Emv utilities unit-tested on JVM (ApduUtils, EmvTlvParser)"
+    ],
+    "in_progress": [
+      "Device-level BLE/HCE end-to-end testing",
+      "PN532 USB/Bluetooth hardware validation",
+      "CI integration for Android JVM and instrumentation tests",
+      "License and external attribution review"
+    ],
+    "next_steps": [
+      "Run device E2E tests for desktop↔Android BLE flows",
+      "Add Android instrumentation tests (Compose + HCE runtime)",
+      "Complete PN532 USB adapter validation on hardware",
+      "Add CI device-run configuration (device farm or emulator verification)"
+    ]
+  },
+  "active_components": {
+    "ui": {
+      "DashboardScreen.kt": "Implemented",
+      "CardReadingScreen.kt": "Implemented (uses IsoDep directly in reader mode)",
+      "EmulationScreen.kt": "Implemented (BLE controls + profile export)",
+      "DatabaseScreen.kt": "Implemented (on-disk profile listing)",
+      "AnalysisScreen.kt": "Implemented (desktop parity)",
+      "notes": "UI works in local dev runs; device-specific behavior (NFC/HCE timing) requires hardware verification"
+    },
+    "core": {
+      "EmvModels.kt": "Implemented",
+      "EmvTlvParser.kt": "Implemented",
+      "NfcAdapterManager.kt": "Improvements added (IsoDep APDU path, PN532 framing)",
+      "PermissionManager.kt": "Implemented (runtime permission helpers)"
+    },
+    "hardware": {
+      "AndroidNFC": "Partially validated (reader-mode flows local); HCE timing & device acceptance pending",
+      "PN532Bluetooth": "Implemented in code; hardware verification pending",
+      "PN532USB": "Code present; USB permission and framing require device tests"
+    }
+  }
+}

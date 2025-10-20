@@ -1,0 +1,115 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 34
+    namespace "com.nf_sp00f.app"
+
+    defaultConfig {
+        applicationId "com.nf_sp00f.app"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.3'
+    }
+
+    // Minimal signing/test configuration
+    signingConfigs {
+        debug {
+            // Prefer an explicit debugKeystore project property; fall back to the
+            // developer's default debug keystore (~/.android/debug.keystore) if present.
+            def defaultDebugKeystore = file(System.properties['user.home'] + '/.android/debug.keystore')
+            if (project.hasProperty('debugKeystore')) {
+                storeFile file(project.property('debugKeystore'))
+            } else if (defaultDebugKeystore.exists()) {
+                storeFile defaultDebugKeystore
+            }
+            // Default Android debug key values (safe for local/dev only)
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+        release {
+            // Read keystore path and credentials from environment variables so CI
+            // can provide a secure keystore without committing it to the repo.
+            def ksPath = System.getenv('KEYSTORE_PATH') ?: System.getenv('RELEASE_KEYSTORE_PATH')
+            if (ksPath != null && file(ksPath).exists()) {
+                storeFile file(ksPath)
+                storePassword System.getenv('KEYSTORE_PASSWORD') ?: ''
+                keyAlias System.getenv('KEY_ALIAS') ?: ''
+                keyPassword System.getenv('KEY_PASSWORD') ?: ''
+            } else {
+                // No keystore provided; release builds will be unsigned unless CI
+                // supplies the KEYSTORE_BASE64 secret and the setup step decodes it.
+            }
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // Release signing is configurable via environment variables in CI
+            // (KEYSTORE_PATH, KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD). When
+            // these are present the CI job will decode the keystore into the
+            // repository workspace and Gradle will pick it up via the signing
+            // config below. This avoids committing secret keystores into the
+            // repository while allowing reproducible, signed releases in CI.
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.10"
+    implementation 'androidx.compose.ui:ui:1.5.3'
+    implementation 'androidx.compose.material:material:1.5.3'
+    implementation 'androidx.compose.ui:ui-tooling-preview:1.5.3'
+    debugImplementation 'androidx.compose.ui:ui-tooling:1.5.3'
+    implementation 'androidx.activity:activity-compose:1.8.0'
+    implementation 'androidx.compose.material3:material3:1.1.0'
+    implementation 'androidx.navigation:navigation-compose:2.7.1'
+    implementation 'androidx.compose.material:material-icons-extended:1.5.3'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.7.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.test:core:1.5.0'
+    testImplementation 'org.robolectric:robolectric:4.10'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

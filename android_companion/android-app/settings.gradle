@@ -1,0 +1,3 @@
+// Standardized root project name to match parent repository naming.
+rootProject.name = 'nf-sp00f'
+include ':app'

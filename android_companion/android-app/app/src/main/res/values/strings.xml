@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Description used by the HCE host-apdu service descriptor -->
+    <string name="hce_service_description">NFSP00F HCE host-apdu service (sample AID list)</string>
+</resources>
