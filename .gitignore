@@ -3,6 +3,8 @@ emv.html
 # Ignore vendored gradle distributions and large gradle zips
 android-app/gradle-dist/
 android-app/gradle-*.zip
+android_companion/android-app/gradle-dist/
+android_companion/android-app/gradle-*.zip
 
 # Build directories
 android_companion/build/
