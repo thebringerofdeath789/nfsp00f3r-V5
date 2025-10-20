@@ -46,6 +46,7 @@ gradle-8.5-bin.zip
 docs./.pytest_cache/
 docs/.venv/
 *.md
+!/README.md
 .github/
 android-app/gradle-dist/
 android-app/gradle-*.zip
