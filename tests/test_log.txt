@@ -1,0 +1,828 @@
+2025-08-16 16:00:31,227 - __main__ - INFO - Starting test execution
+2025-08-16 16:00:31,769 - faker.factory - DEBUG - Not in REPL -> leaving logger event level as is.
+2025-08-16 16:00:32,524 - __main__ - ERROR - Tests failed in tests/test_hardware.py
+2025-08-16 16:00:32,833 - __main__ - ERROR - Tests failed in tests/test_emv_functionality.py
+2025-08-16 16:00:33,117 - __main__ - ERROR - Tests failed in tests/test_security_research.py
+2025-08-16 16:00:33,132 - __main__ - ERROR - Some tests failed - check logs for details
+2025-08-16 16:01:30,125 - faker.factory - DEBUG - Not in REPL -> leaving logger event level as is.
+2025-08-16 16:01:52,607 - faker.factory - DEBUG - Not in REPL -> leaving logger event level as is.
+2025-08-16 16:01:52,864 - py.warnings - WARNING - c:\Users\admin\Documents\nfsp00f3r-V5.0\tests\test_hardware.py:243: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+  @pytest.mark.slow
+
+2025-08-16 16:01:52,864 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.address`.
+2025-08-16 16:01:52,873 - faker.factory - DEBUG - Provider `faker.providers.address` has been localized to `en_US`.
+2025-08-16 16:01:52,883 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.automotive`.
+2025-08-16 16:01:52,890 - faker.factory - DEBUG - Provider `faker.providers.automotive` has been localized to `en_US`.
+2025-08-16 16:01:52,895 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.bank`.
+2025-08-16 16:01:52,896 - faker.factory - DEBUG - Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2025-08-16 16:01:52,902 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.barcode`.
+2025-08-16 16:01:52,903 - faker.factory - DEBUG - Provider `faker.providers.barcode` has been localized to `en_US`.
+2025-08-16 16:01:52,909 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.color`.
+2025-08-16 16:01:52,913 - faker.factory - DEBUG - Provider `faker.providers.color` has been localized to `en_US`.
+2025-08-16 16:01:52,915 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.company`.
+2025-08-16 16:01:52,918 - faker.factory - DEBUG - Provider `faker.providers.company` has been localized to `en_US`.
+2025-08-16 16:01:52,920 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2025-08-16 16:01:52,922 - faker.factory - DEBUG - Provider `faker.providers.credit_card` has been localized to `en_US`.
+2025-08-16 16:01:52,926 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.currency`.
+2025-08-16 16:01:52,929 - faker.factory - DEBUG - Provider `faker.providers.currency` has been localized to `en_US`.
+2025-08-16 16:01:52,932 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.date_time`.
+2025-08-16 16:01:52,935 - faker.factory - DEBUG - Provider `faker.providers.date_time` has been localized to `en_US`.
+2025-08-16 16:01:52,936 - faker.factory - DEBUG - Provider `faker.providers.doi` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:52,936 - faker.factory - DEBUG - Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:52,938 - faker.factory - DEBUG - Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:52,940 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.geo`.
+2025-08-16 16:01:52,940 - faker.factory - DEBUG - Provider `faker.providers.geo` has been localized to `en_US`.
+2025-08-16 16:01:52,944 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.internet`.
+2025-08-16 16:01:52,947 - faker.factory - DEBUG - Provider `faker.providers.internet` has been localized to `en_US`.
+2025-08-16 16:01:52,949 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.isbn`.
+2025-08-16 16:01:52,949 - faker.factory - DEBUG - Provider `faker.providers.isbn` has been localized to `en_US`.
+2025-08-16 16:01:52,949 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.job`.
+2025-08-16 16:01:52,956 - faker.factory - DEBUG - Provider `faker.providers.job` has been localized to `en_US`.
+2025-08-16 16:01:52,959 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.lorem`.
+2025-08-16 16:01:52,963 - faker.factory - DEBUG - Provider `faker.providers.lorem` has been localized to `en_US`.
+2025-08-16 16:01:52,963 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.misc`.
+2025-08-16 16:01:52,963 - faker.factory - DEBUG - Provider `faker.providers.misc` has been localized to `en_US`.
+2025-08-16 16:01:52,966 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.passport`.
+2025-08-16 16:01:52,966 - faker.factory - DEBUG - Provider `faker.providers.passport` has been localized to `en_US`.
+2025-08-16 16:01:52,971 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.person`.
+2025-08-16 16:01:52,976 - faker.factory - DEBUG - Provider `faker.providers.person` has been localized to `en_US`.
+2025-08-16 16:01:52,992 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2025-08-16 16:01:52,999 - faker.factory - DEBUG - Provider `faker.providers.phone_number` has been localized to `en_US`.
+2025-08-16 16:01:53,000 - faker.factory - DEBUG - Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:53,002 - faker.factory - DEBUG - Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:53,002 - faker.factory - DEBUG - Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:53,002 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.ssn`.
+2025-08-16 16:01:53,005 - faker.factory - DEBUG - Provider `faker.providers.ssn` has been localized to `en_US`.
+2025-08-16 16:01:53,011 - faker.factory - DEBUG - Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:01:53,013 - tests.test_hardware - INFO - Hardware check passed: Hardware ready: ['ACS ACR122 0']
+2025-08-16 16:01:53,014 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:01:53,014 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:01:53,014 - readers - INFO - Detected 1 readers
+2025-08-16 16:01:53,021 - card_manager - INFO - Card manager initialized
+2025-08-16 16:01:53,021 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:01:53,027 - readers - INFO - Detected 1 readers
+2025-08-16 16:01:53,027 - tests.test_hardware - INFO - Available readers: ['ACS ACR122 0']
+2025-08-16 16:01:53,028 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:54,890 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:54,906 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:54,906 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:01:54,908 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:54,910 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:54,923 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:54,924 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:01:54,924 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:01:54,924 - emv_card - DEBUG - EMV card initialized
+2025-08-16 16:01:54,924 - tests.test_hardware - INFO - Found 0 applications
+2025-08-16 16:01:54,944 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:01:54,944 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:01:54,955 - tests.test_hardware - INFO - PSE selection successful: 28 bytes
+2025-08-16 16:01:54,957 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:54,960 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:54,975 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:54,990 - readers.PCSCCardReader - DEBUG - APDU >> 80A80000028300
+2025-08-16 16:01:54,991 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:01:54,991 - tests.test_hardware - WARNING - GPO failed: 6D00
+2025-08-16 16:01:55,014 - readers.PCSCCardReader - DEBUG - APDU >> 00B2010C00
+2025-08-16 16:01:55,014 - readers.PCSCCardReader - DEBUG - APDU << 702661244F07A0000000031010500A56495341204445424954870101730A5F5502555342034031639000
+2025-08-16 16:01:55,014 - tests.test_hardware - INFO - READ RECORD SFI1 Rec1: 40 bytes
+2025-08-16 16:01:55,014 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:01:55,021 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:01:55,047 - readers.PCSCCardReader - DEBUG - APDU >> 00B2020C00
+2025-08-16 16:01:55,047 - readers.PCSCCardReader - DEBUG - APDU << 702461224F07A000000098084050085553204445424954870102730A5F5502555342034031639000
+2025-08-16 16:01:55,047 - tests.test_hardware - INFO - READ RECORD SFI1 Rec2: 38 bytes
+2025-08-16 16:01:55,047 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:01:55,047 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:01:55,064 - readers.PCSCCardReader - DEBUG - APDU >> 00B2030C00
+2025-08-16 16:01:55,064 - readers.PCSCCardReader - DEBUG - APDU << 6A83
+2025-08-16 16:01:55,079 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:01:55,079 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,092 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021400
+2025-08-16 16:01:55,093 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,105 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031400
+2025-08-16 16:01:55,106 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,114 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041400
+2025-08-16 16:01:55,114 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,127 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011C00
+2025-08-16 16:01:55,127 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,147 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021C00
+2025-08-16 16:01:55,147 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,161 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031C00
+2025-08-16 16:01:55,161 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,174 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041C00
+2025-08-16 16:01:55,174 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,181 - readers.PCSCCardReader - DEBUG - APDU >> 00B2012400
+2025-08-16 16:01:55,188 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,197 - readers.PCSCCardReader - DEBUG - APDU >> 00B2022400
+2025-08-16 16:01:55,197 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,209 - readers.PCSCCardReader - DEBUG - APDU >> 00B2032400
+2025-08-16 16:01:55,209 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,229 - readers.PCSCCardReader - DEBUG - APDU >> 00B2042400
+2025-08-16 16:01:55,229 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:01:55,232 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:55,233 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:55,241 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:55,257 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:01:55,258 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:01:55,258 - tests.test_hardware - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:01:55,260 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:55,262 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:55,275 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:55,294 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:01:55,294 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:01:55,294 - tests.test_hardware - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:01:55,295 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:55,298 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:55,305 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:55,306 - tests.test_hardware - INFO - Operation 1/5: 2/2 passed
+2025-08-16 16:01:55,823 - tests.test_hardware - INFO - Operation 2/5: 2/2 passed
+2025-08-16 16:01:56,339 - tests.test_hardware - INFO - Operation 3/5: 2/2 passed
+2025-08-16 16:01:56,856 - tests.test_hardware - INFO - Operation 4/5: 2/2 passed
+2025-08-16 16:01:57,372 - tests.test_hardware - INFO - Operation 5/5: 2/2 passed
+2025-08-16 16:01:57,888 - tests.test_hardware - INFO - Success rate: 100.0%
+2025-08-16 16:01:57,890 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:57,890 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:01:57,906 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:01:57,907 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:01:57,907 - tests.test_hardware - INFO - ATR length: 13 bytes
+2025-08-16 16:01:57,913 - tests.test_hardware - WARNING - Card manager operation failed: 'CardManager' object has no attribute 'get_card_info'
+2025-08-16 16:01:57,915 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:01:57,915 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:42,610 - __main__ - INFO - Starting test execution
+2025-08-16 16:05:42,810 - faker.factory - DEBUG - Not in REPL -> leaving logger event level as is.
+2025-08-16 16:05:43,084 - py.warnings - WARNING - c:\Users\admin\Documents\nfsp00f3r-V5.0\tests\test_hardware.py:244: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+  @pytest.mark.slow
+
+2025-08-16 16:05:43,084 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.address`.
+2025-08-16 16:05:43,095 - faker.factory - DEBUG - Provider `faker.providers.address` has been localized to `en_US`.
+2025-08-16 16:05:43,100 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.automotive`.
+2025-08-16 16:05:43,101 - faker.factory - DEBUG - Provider `faker.providers.automotive` has been localized to `en_US`.
+2025-08-16 16:05:43,101 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.bank`.
+2025-08-16 16:05:43,101 - faker.factory - DEBUG - Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2025-08-16 16:05:43,101 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.barcode`.
+2025-08-16 16:05:43,101 - faker.factory - DEBUG - Provider `faker.providers.barcode` has been localized to `en_US`.
+2025-08-16 16:05:43,110 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.color`.
+2025-08-16 16:05:43,112 - faker.factory - DEBUG - Provider `faker.providers.color` has been localized to `en_US`.
+2025-08-16 16:05:43,113 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.company`.
+2025-08-16 16:05:43,115 - faker.factory - DEBUG - Provider `faker.providers.company` has been localized to `en_US`.
+2025-08-16 16:05:43,115 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2025-08-16 16:05:43,119 - faker.factory - DEBUG - Provider `faker.providers.credit_card` has been localized to `en_US`.
+2025-08-16 16:05:43,120 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.currency`.
+2025-08-16 16:05:43,122 - faker.factory - DEBUG - Provider `faker.providers.currency` has been localized to `en_US`.
+2025-08-16 16:05:43,123 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.date_time`.
+2025-08-16 16:05:43,127 - faker.factory - DEBUG - Provider `faker.providers.date_time` has been localized to `en_US`.
+2025-08-16 16:05:43,128 - faker.factory - DEBUG - Provider `faker.providers.doi` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,128 - faker.factory - DEBUG - Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,129 - faker.factory - DEBUG - Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,129 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.geo`.
+2025-08-16 16:05:43,131 - faker.factory - DEBUG - Provider `faker.providers.geo` has been localized to `en_US`.
+2025-08-16 16:05:43,131 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.internet`.
+2025-08-16 16:05:43,136 - faker.factory - DEBUG - Provider `faker.providers.internet` has been localized to `en_US`.
+2025-08-16 16:05:43,137 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.isbn`.
+2025-08-16 16:05:43,138 - faker.factory - DEBUG - Provider `faker.providers.isbn` has been localized to `en_US`.
+2025-08-16 16:05:43,139 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.job`.
+2025-08-16 16:05:43,141 - faker.factory - DEBUG - Provider `faker.providers.job` has been localized to `en_US`.
+2025-08-16 16:05:43,142 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.lorem`.
+2025-08-16 16:05:43,144 - faker.factory - DEBUG - Provider `faker.providers.lorem` has been localized to `en_US`.
+2025-08-16 16:05:43,145 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.misc`.
+2025-08-16 16:05:43,145 - faker.factory - DEBUG - Provider `faker.providers.misc` has been localized to `en_US`.
+2025-08-16 16:05:43,147 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.passport`.
+2025-08-16 16:05:43,148 - faker.factory - DEBUG - Provider `faker.providers.passport` has been localized to `en_US`.
+2025-08-16 16:05:43,150 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.person`.
+2025-08-16 16:05:43,154 - faker.factory - DEBUG - Provider `faker.providers.person` has been localized to `en_US`.
+2025-08-16 16:05:43,158 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2025-08-16 16:05:43,162 - faker.factory - DEBUG - Provider `faker.providers.phone_number` has been localized to `en_US`.
+2025-08-16 16:05:43,164 - faker.factory - DEBUG - Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,164 - faker.factory - DEBUG - Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,165 - faker.factory - DEBUG - Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,166 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.ssn`.
+2025-08-16 16:05:43,169 - faker.factory - DEBUG - Provider `faker.providers.ssn` has been localized to `en_US`.
+2025-08-16 16:05:43,170 - faker.factory - DEBUG - Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:05:43,172 - tests.test_hardware - INFO - Hardware check passed: Hardware ready: ['ACS ACR122 0']
+2025-08-16 16:05:43,172 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:05:43,173 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:05:43,177 - readers - INFO - Detected 1 readers
+2025-08-16 16:05:43,177 - card_manager - INFO - Card manager initialized
+2025-08-16 16:05:43,179 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:05:43,183 - readers - INFO - Detected 1 readers
+2025-08-16 16:05:43,183 - tests.test_hardware - INFO - Available readers: ['ACS ACR122 0']
+2025-08-16 16:05:43,184 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:43,187 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:43,193 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:43,193 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:05:43,194 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:43,196 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:43,212 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:43,212 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:05:43,212 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:05:43,212 - emv_card - DEBUG - EMV card initialized
+2025-08-16 16:05:43,212 - tests.test_hardware - INFO - Found 0 applications
+2025-08-16 16:05:43,244 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:05:43,244 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:05:43,245 - tests.test_hardware - INFO - PSE selection successful: 28 bytes
+2025-08-16 16:05:43,246 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:43,251 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:43,259 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:43,269 - readers.PCSCCardReader - DEBUG - APDU >> 80A80000028300
+2025-08-16 16:05:43,269 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:05:43,269 - tests.test_hardware - WARNING - GPO failed: 6D00
+2025-08-16 16:05:43,301 - readers.PCSCCardReader - DEBUG - APDU >> 00B2010C00
+2025-08-16 16:05:43,301 - readers.PCSCCardReader - DEBUG - APDU << 702661244F07A0000000031010500A56495341204445424954870101730A5F5502555342034031639000
+2025-08-16 16:05:43,301 - tests.test_hardware - INFO - READ RECORD SFI1 Rec1: 40 bytes
+2025-08-16 16:05:43,301 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:05:43,301 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:05:43,333 - readers.PCSCCardReader - DEBUG - APDU >> 00B2020C00
+2025-08-16 16:05:43,333 - readers.PCSCCardReader - DEBUG - APDU << 702461224F07A000000098084050085553204445424954870102730A5F5502555342034031639000
+2025-08-16 16:05:43,333 - tests.test_hardware - INFO - READ RECORD SFI1 Rec2: 38 bytes
+2025-08-16 16:05:43,333 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:05:43,333 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:05:43,348 - readers.PCSCCardReader - DEBUG - APDU >> 00B2030C00
+2025-08-16 16:05:43,349 - readers.PCSCCardReader - DEBUG - APDU << 6A83
+2025-08-16 16:05:43,361 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:05:43,361 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,367 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021400
+2025-08-16 16:05:43,367 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,384 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031400
+2025-08-16 16:05:43,384 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,401 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041400
+2025-08-16 16:05:43,401 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,414 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011C00
+2025-08-16 16:05:43,414 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,427 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021C00
+2025-08-16 16:05:43,428 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,435 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031C00
+2025-08-16 16:05:43,435 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,449 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041C00
+2025-08-16 16:05:43,449 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,462 - readers.PCSCCardReader - DEBUG - APDU >> 00B2012400
+2025-08-16 16:05:43,462 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,481 - readers.PCSCCardReader - DEBUG - APDU >> 00B2022400
+2025-08-16 16:05:43,482 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,495 - readers.PCSCCardReader - DEBUG - APDU >> 00B2032400
+2025-08-16 16:05:43,495 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,495 - readers.PCSCCardReader - DEBUG - APDU >> 00B2042400
+2025-08-16 16:05:43,509 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:43,511 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:43,514 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:43,527 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:43,543 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:05:43,543 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:05:43,544 - tests.test_hardware - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:05:43,546 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:43,550 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:43,562 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:43,581 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:05:43,581 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:05:43,582 - tests.test_hardware - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:05:43,582 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:43,582 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:43,595 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:43,596 - tests.test_hardware - INFO - Operation 1/5: 2/2 passed
+2025-08-16 16:05:44,109 - tests.test_hardware - INFO - Operation 2/5: 2/2 passed
+2025-08-16 16:05:44,610 - tests.test_hardware - INFO - Operation 3/5: 2/2 passed
+2025-08-16 16:05:45,126 - tests.test_hardware - INFO - Operation 4/5: 2/2 passed
+2025-08-16 16:05:45,642 - tests.test_hardware - INFO - Operation 5/5: 2/2 passed
+2025-08-16 16:05:46,159 - tests.test_hardware - INFO - Success rate: 100.0%
+2025-08-16 16:05:46,160 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,168 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:46,176 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:46,176 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:05:46,177 - tests.test_hardware - INFO - ATR length: 13 bytes
+2025-08-16 16:05:46,177 - tests.test_hardware - INFO - Card manager integration test completed
+2025-08-16 16:05:46,177 - tests.test_hardware - INFO - Basic ATR reading and validation successful
+2025-08-16 16:05:46,179 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,179 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,228 - __main__ - INFO - Tests passed in tests/test_hardware.py
+2025-08-16 16:05:46,374 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:05:46,378 - readers - INFO - Detected 1 readers
+2025-08-16 16:05:46,380 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:46,398 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:46,398 - tests.test_emv_functionality - INFO - Transaction data created: TEST001
+2025-08-16 16:05:46,398 - tests.test_emv_functionality - INFO - Amount: $10.00
+2025-08-16 16:05:46,399 - tests.test_emv_functionality - INFO - Currency: 840
+2025-08-16 16:05:46,399 - tests.test_emv_functionality - INFO - Transaction initialization successful
+2025-08-16 16:05:46,401 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,403 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:46,411 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:46,432 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:05:46,442 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:05:46,442 - tests.test_emv_functionality - INFO - PSE selection successful
+2025-08-16 16:05:46,442 - tests.test_emv_functionality - INFO - Application selection test completed
+2025-08-16 16:05:46,444 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,448 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:46,461 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:46,477 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:05:46,478 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:05:46,478 - tests.test_emv_functionality - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:05:46,478 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,483 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:46,493 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:46,511 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:05:46,511 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:05:46,511 - tests.test_emv_functionality - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:05:46,513 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,516 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:05:46,529 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:05:46,529 - tests.test_emv_functionality - INFO - Testing basic EMV command sequence
+2025-08-16 16:05:46,559 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:05:46,560 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:05:46,560 - tests.test_emv_functionality - INFO - Step 1 - PSE Select: 9000
+2025-08-16 16:05:46,568 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:05:46,568 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:05:46,568 - tests.test_emv_functionality - INFO - Step 2 - Read Record: 6A86
+2025-08-16 16:05:46,586 - readers.PCSCCardReader - DEBUG - APDU >> 80CA9F1300
+2025-08-16 16:05:46,587 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:05:46,587 - tests.test_emv_functionality - INFO - Step 3 - Get Data: 6D00
+2025-08-16 16:05:46,587 - tests.test_emv_functionality - INFO - Basic transaction flow test completed
+2025-08-16 16:05:46,587 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,587 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:05:46,644 - __main__ - INFO - Tests passed in tests/test_emv_functionality.py
+2025-08-16 16:05:47,059 - __main__ - ERROR - Tests failed in tests/test_security_research.py
+2025-08-16 16:05:47,059 - __main__ - ERROR - Some tests failed - check logs for details
+2025-08-16 16:07:36,915 - __main__ - INFO - Starting test execution
+2025-08-16 16:07:37,129 - faker.factory - DEBUG - Not in REPL -> leaving logger event level as is.
+2025-08-16 16:07:37,385 - py.warnings - WARNING - c:\Users\admin\Documents\nfsp00f3r-V5.0\tests\test_hardware.py:244: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+  @pytest.mark.slow
+
+2025-08-16 16:07:37,397 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.address`.
+2025-08-16 16:07:37,403 - faker.factory - DEBUG - Provider `faker.providers.address` has been localized to `en_US`.
+2025-08-16 16:07:37,405 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.automotive`.
+2025-08-16 16:07:37,408 - faker.factory - DEBUG - Provider `faker.providers.automotive` has been localized to `en_US`.
+2025-08-16 16:07:37,409 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.bank`.
+2025-08-16 16:07:37,412 - faker.factory - DEBUG - Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2025-08-16 16:07:37,413 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.barcode`.
+2025-08-16 16:07:37,415 - faker.factory - DEBUG - Provider `faker.providers.barcode` has been localized to `en_US`.
+2025-08-16 16:07:37,416 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.color`.
+2025-08-16 16:07:37,419 - faker.factory - DEBUG - Provider `faker.providers.color` has been localized to `en_US`.
+2025-08-16 16:07:37,420 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.company`.
+2025-08-16 16:07:37,422 - faker.factory - DEBUG - Provider `faker.providers.company` has been localized to `en_US`.
+2025-08-16 16:07:37,423 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2025-08-16 16:07:37,423 - faker.factory - DEBUG - Provider `faker.providers.credit_card` has been localized to `en_US`.
+2025-08-16 16:07:37,423 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.currency`.
+2025-08-16 16:07:37,428 - faker.factory - DEBUG - Provider `faker.providers.currency` has been localized to `en_US`.
+2025-08-16 16:07:37,428 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.date_time`.
+2025-08-16 16:07:37,432 - faker.factory - DEBUG - Provider `faker.providers.date_time` has been localized to `en_US`.
+2025-08-16 16:07:37,435 - faker.factory - DEBUG - Provider `faker.providers.doi` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,435 - faker.factory - DEBUG - Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,435 - faker.factory - DEBUG - Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,435 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.geo`.
+2025-08-16 16:07:37,436 - faker.factory - DEBUG - Provider `faker.providers.geo` has been localized to `en_US`.
+2025-08-16 16:07:37,437 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.internet`.
+2025-08-16 16:07:37,440 - faker.factory - DEBUG - Provider `faker.providers.internet` has been localized to `en_US`.
+2025-08-16 16:07:37,442 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.isbn`.
+2025-08-16 16:07:37,442 - faker.factory - DEBUG - Provider `faker.providers.isbn` has been localized to `en_US`.
+2025-08-16 16:07:37,443 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.job`.
+2025-08-16 16:07:37,446 - faker.factory - DEBUG - Provider `faker.providers.job` has been localized to `en_US`.
+2025-08-16 16:07:37,449 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.lorem`.
+2025-08-16 16:07:37,451 - faker.factory - DEBUG - Provider `faker.providers.lorem` has been localized to `en_US`.
+2025-08-16 16:07:37,451 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.misc`.
+2025-08-16 16:07:37,452 - faker.factory - DEBUG - Provider `faker.providers.misc` has been localized to `en_US`.
+2025-08-16 16:07:37,453 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.passport`.
+2025-08-16 16:07:37,453 - faker.factory - DEBUG - Provider `faker.providers.passport` has been localized to `en_US`.
+2025-08-16 16:07:37,454 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.person`.
+2025-08-16 16:07:37,455 - faker.factory - DEBUG - Provider `faker.providers.person` has been localized to `en_US`.
+2025-08-16 16:07:37,465 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2025-08-16 16:07:37,468 - faker.factory - DEBUG - Provider `faker.providers.phone_number` has been localized to `en_US`.
+2025-08-16 16:07:37,469 - faker.factory - DEBUG - Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,470 - faker.factory - DEBUG - Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,470 - faker.factory - DEBUG - Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,471 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.ssn`.
+2025-08-16 16:07:37,471 - faker.factory - DEBUG - Provider `faker.providers.ssn` has been localized to `en_US`.
+2025-08-16 16:07:37,475 - faker.factory - DEBUG - Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:07:37,477 - tests.test_hardware - INFO - Hardware check passed: Hardware ready: ['ACS ACR122 0']
+2025-08-16 16:07:37,477 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:07:37,478 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:07:37,483 - readers - INFO - Detected 1 readers
+2025-08-16 16:07:37,484 - card_manager - INFO - Card manager initialized
+2025-08-16 16:07:37,484 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:07:37,488 - readers - INFO - Detected 1 readers
+2025-08-16 16:07:37,488 - tests.test_hardware - INFO - Available readers: ['ACS ACR122 0']
+2025-08-16 16:07:37,488 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:37,490 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:37,494 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:37,495 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:07:37,496 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:37,500 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:37,512 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:37,513 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:07:37,513 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:07:37,513 - emv_card - DEBUG - EMV card initialized
+2025-08-16 16:07:37,513 - tests.test_hardware - INFO - Found 0 applications
+2025-08-16 16:07:37,536 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:07:37,545 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:37,545 - tests.test_hardware - INFO - PSE selection successful: 28 bytes
+2025-08-16 16:07:37,548 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:37,551 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:37,562 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:37,571 - readers.PCSCCardReader - DEBUG - APDU >> 80A80000028300
+2025-08-16 16:07:37,571 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:07:37,571 - tests.test_hardware - WARNING - GPO failed: 6D00
+2025-08-16 16:07:37,599 - readers.PCSCCardReader - DEBUG - APDU >> 00B2010C00
+2025-08-16 16:07:37,599 - readers.PCSCCardReader - DEBUG - APDU << 702661244F07A0000000031010500A56495341204445424954870101730A5F5502555342034031639000
+2025-08-16 16:07:37,599 - tests.test_hardware - INFO - READ RECORD SFI1 Rec1: 40 bytes
+2025-08-16 16:07:37,599 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:07:37,599 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:07:37,631 - readers.PCSCCardReader - DEBUG - APDU >> 00B2020C00
+2025-08-16 16:07:37,631 - readers.PCSCCardReader - DEBUG - APDU << 702461224F07A000000098084050085553204445424954870102730A5F5502555342034031639000
+2025-08-16 16:07:37,631 - tests.test_hardware - INFO - READ RECORD SFI1 Rec2: 38 bytes
+2025-08-16 16:07:37,631 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:07:37,639 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:07:37,652 - readers.PCSCCardReader - DEBUG - APDU >> 00B2030C00
+2025-08-16 16:07:37,652 - readers.PCSCCardReader - DEBUG - APDU << 6A83
+2025-08-16 16:07:37,666 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:07:37,666 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,679 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021400
+2025-08-16 16:07:37,679 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,688 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031400
+2025-08-16 16:07:37,688 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,700 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041400
+2025-08-16 16:07:37,700 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,719 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011C00
+2025-08-16 16:07:37,720 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,733 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021C00
+2025-08-16 16:07:37,733 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,745 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031C00
+2025-08-16 16:07:37,746 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,755 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041C00
+2025-08-16 16:07:37,755 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,771 - readers.PCSCCardReader - DEBUG - APDU >> 00B2012400
+2025-08-16 16:07:37,771 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,788 - readers.PCSCCardReader - DEBUG - APDU >> 00B2022400
+2025-08-16 16:07:37,788 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,801 - readers.PCSCCardReader - DEBUG - APDU >> 00B2032400
+2025-08-16 16:07:37,801 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,815 - readers.PCSCCardReader - DEBUG - APDU >> 00B2042400
+2025-08-16 16:07:37,815 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:37,816 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:37,818 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:37,828 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:37,845 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:07:37,845 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:07:37,846 - tests.test_hardware - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:07:37,849 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:37,852 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:37,862 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:37,882 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:07:37,882 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:07:37,882 - tests.test_hardware - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:07:37,883 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:37,885 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:37,895 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:37,896 - tests.test_hardware - INFO - Operation 1/5: 2/2 passed
+2025-08-16 16:07:38,402 - tests.test_hardware - INFO - Operation 2/5: 2/2 passed
+2025-08-16 16:07:38,904 - tests.test_hardware - INFO - Operation 3/5: 2/2 passed
+2025-08-16 16:07:39,406 - tests.test_hardware - INFO - Operation 4/5: 2/2 passed
+2025-08-16 16:07:39,908 - tests.test_hardware - INFO - Operation 5/5: 2/2 passed
+2025-08-16 16:07:40,409 - tests.test_hardware - INFO - Success rate: 100.0%
+2025-08-16 16:07:40,409 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,409 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:40,428 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:40,430 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:07:40,430 - tests.test_hardware - INFO - ATR length: 13 bytes
+2025-08-16 16:07:40,431 - tests.test_hardware - INFO - Card manager integration test completed
+2025-08-16 16:07:40,431 - tests.test_hardware - INFO - Basic ATR reading and validation successful
+2025-08-16 16:07:40,431 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,431 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,481 - __main__ - INFO - Tests passed in tests/test_hardware.py
+2025-08-16 16:07:40,627 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:07:40,632 - readers - INFO - Detected 1 readers
+2025-08-16 16:07:40,634 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:40,645 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:40,645 - tests.test_emv_functionality - INFO - Transaction data created: TEST001
+2025-08-16 16:07:40,646 - tests.test_emv_functionality - INFO - Amount: $10.00
+2025-08-16 16:07:40,646 - tests.test_emv_functionality - INFO - Currency: 840
+2025-08-16 16:07:40,646 - tests.test_emv_functionality - INFO - Transaction initialization successful
+2025-08-16 16:07:40,649 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,651 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:40,661 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:40,687 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:07:40,687 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:40,687 - tests.test_emv_functionality - INFO - PSE selection successful
+2025-08-16 16:07:40,692 - tests.test_emv_functionality - INFO - Application selection test completed
+2025-08-16 16:07:40,693 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,698 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:40,712 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:40,728 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:07:40,729 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:07:40,729 - tests.test_emv_functionality - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:07:40,732 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,734 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:40,745 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:40,764 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:07:40,765 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:07:40,765 - tests.test_emv_functionality - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:07:40,765 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,769 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:40,778 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:40,778 - tests.test_emv_functionality - INFO - Testing basic EMV command sequence
+2025-08-16 16:07:40,804 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:07:40,804 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:40,804 - tests.test_emv_functionality - INFO - Step 1 - PSE Select: 9000
+2025-08-16 16:07:40,820 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:07:40,820 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:07:40,820 - tests.test_emv_functionality - INFO - Step 2 - Read Record: 6A86
+2025-08-16 16:07:40,837 - readers.PCSCCardReader - DEBUG - APDU >> 80CA9F1300
+2025-08-16 16:07:40,837 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:07:40,837 - tests.test_emv_functionality - INFO - Step 3 - Get Data: 6D00
+2025-08-16 16:07:40,837 - tests.test_emv_functionality - INFO - Basic transaction flow test completed
+2025-08-16 16:07:40,837 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,837 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:40,898 - __main__ - INFO - Tests passed in tests/test_emv_functionality.py
+2025-08-16 16:07:41,052 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:07:41,054 - readers - INFO - Detected 1 readers
+2025-08-16 16:07:41,054 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:41,061 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:41,087 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,087 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,087 - tests.test_security_research - DEBUG - Iteration 0: 0.031478s, Status: 9000
+2025-08-16 16:07:41,210 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,210 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,210 - tests.test_security_research - DEBUG - Iteration 1: 0.031730s, Status: 9000
+2025-08-16 16:07:41,342 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,358 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,358 - tests.test_security_research - DEBUG - Iteration 2: 0.031769s, Status: 9000
+2025-08-16 16:07:41,491 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,491 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,491 - tests.test_security_research - DEBUG - Iteration 3: 0.031856s, Status: 9000
+2025-08-16 16:07:41,608 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,624 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,624 - tests.test_security_research - DEBUG - Iteration 4: 0.031718s, Status: 9000
+2025-08-16 16:07:41,744 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,744 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,744 - tests.test_security_research - DEBUG - Iteration 5: 0.031707s, Status: 9000
+2025-08-16 16:07:41,861 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,876 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,876 - tests.test_security_research - DEBUG - Iteration 6: 0.031863s, Status: 9000
+2025-08-16 16:07:41,993 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:41,993 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:41,993 - tests.test_security_research - DEBUG - Iteration 7: 0.031365s, Status: 9000
+2025-08-16 16:07:42,125 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:42,141 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:42,141 - tests.test_security_research - DEBUG - Iteration 8: 0.031805s, Status: 9000
+2025-08-16 16:07:42,259 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:07:42,274 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:07:42,274 - tests.test_security_research - DEBUG - Iteration 9: 0.031832s, Status: 9000
+2025-08-16 16:07:42,379 - tests.test_security_research - INFO - Timing analysis results:
+2025-08-16 16:07:42,379 - tests.test_security_research - INFO -   Average: 0.031712s
+2025-08-16 16:07:42,379 - tests.test_security_research - INFO -   Min: 0.031365s
+2025-08-16 16:07:42,379 - tests.test_security_research - INFO -   Max: 0.031863s
+2025-08-16 16:07:42,379 - tests.test_security_research - INFO -   Variation: 0.000498s
+2025-08-16 16:07:42,379 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:42,379 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:42,394 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:42,462 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:42,478 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:42,494 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:42,498 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:42,505 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:07:42,511 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:07:42,520 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:42,521 - tests.test_security_research - WARNING - Hardware emulation test failed: 'ChameleonMiniController' object has no attribute 'test_connection'
+2025-08-16 16:07:42,521 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:42,521 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:07:42,627 - __main__ - ERROR - Tests failed in tests/test_security_research.py
+2025-08-16 16:07:42,627 - __main__ - ERROR - Some tests failed - check logs for details
+2025-08-16 16:18:02,433 - __main__ - INFO - Starting test execution
+2025-08-16 16:18:02,649 - faker.factory - DEBUG - Not in REPL -> leaving logger event level as is.
+2025-08-16 16:18:02,934 - py.warnings - WARNING - c:\Users\admin\Documents\nfsp00f3r-V5.0\tests\test_hardware.py:244: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+  @pytest.mark.slow
+
+2025-08-16 16:18:02,934 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.address`.
+2025-08-16 16:18:02,934 - faker.factory - DEBUG - Provider `faker.providers.address` has been localized to `en_US`.
+2025-08-16 16:18:02,951 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.automotive`.
+2025-08-16 16:18:02,953 - faker.factory - DEBUG - Provider `faker.providers.automotive` has been localized to `en_US`.
+2025-08-16 16:18:02,955 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.bank`.
+2025-08-16 16:18:02,957 - faker.factory - DEBUG - Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2025-08-16 16:18:02,957 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.barcode`.
+2025-08-16 16:18:02,958 - faker.factory - DEBUG - Provider `faker.providers.barcode` has been localized to `en_US`.
+2025-08-16 16:18:02,959 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.color`.
+2025-08-16 16:18:02,962 - faker.factory - DEBUG - Provider `faker.providers.color` has been localized to `en_US`.
+2025-08-16 16:18:02,963 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.company`.
+2025-08-16 16:18:02,966 - faker.factory - DEBUG - Provider `faker.providers.company` has been localized to `en_US`.
+2025-08-16 16:18:02,967 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2025-08-16 16:18:02,968 - faker.factory - DEBUG - Provider `faker.providers.credit_card` has been localized to `en_US`.
+2025-08-16 16:18:02,969 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.currency`.
+2025-08-16 16:18:02,973 - faker.factory - DEBUG - Provider `faker.providers.currency` has been localized to `en_US`.
+2025-08-16 16:18:02,974 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.date_time`.
+2025-08-16 16:18:02,977 - faker.factory - DEBUG - Provider `faker.providers.date_time` has been localized to `en_US`.
+2025-08-16 16:18:02,978 - faker.factory - DEBUG - Provider `faker.providers.doi` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:02,978 - faker.factory - DEBUG - Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:02,978 - faker.factory - DEBUG - Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:02,978 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.geo`.
+2025-08-16 16:18:02,980 - faker.factory - DEBUG - Provider `faker.providers.geo` has been localized to `en_US`.
+2025-08-16 16:18:02,983 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.internet`.
+2025-08-16 16:18:02,985 - faker.factory - DEBUG - Provider `faker.providers.internet` has been localized to `en_US`.
+2025-08-16 16:18:02,987 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.isbn`.
+2025-08-16 16:18:02,988 - faker.factory - DEBUG - Provider `faker.providers.isbn` has been localized to `en_US`.
+2025-08-16 16:18:02,988 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.job`.
+2025-08-16 16:18:02,991 - faker.factory - DEBUG - Provider `faker.providers.job` has been localized to `en_US`.
+2025-08-16 16:18:02,992 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.lorem`.
+2025-08-16 16:18:02,994 - faker.factory - DEBUG - Provider `faker.providers.lorem` has been localized to `en_US`.
+2025-08-16 16:18:02,994 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.misc`.
+2025-08-16 16:18:02,994 - faker.factory - DEBUG - Provider `faker.providers.misc` has been localized to `en_US`.
+2025-08-16 16:18:02,995 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.passport`.
+2025-08-16 16:18:02,996 - faker.factory - DEBUG - Provider `faker.providers.passport` has been localized to `en_US`.
+2025-08-16 16:18:02,997 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.person`.
+2025-08-16 16:18:03,004 - faker.factory - DEBUG - Provider `faker.providers.person` has been localized to `en_US`.
+2025-08-16 16:18:03,007 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2025-08-16 16:18:03,007 - faker.factory - DEBUG - Provider `faker.providers.phone_number` has been localized to `en_US`.
+2025-08-16 16:18:03,007 - faker.factory - DEBUG - Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:03,007 - faker.factory - DEBUG - Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:03,007 - faker.factory - DEBUG - Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:03,013 - faker.factory - DEBUG - Looking for locale `en_US` in provider `faker.providers.ssn`.
+2025-08-16 16:18:03,017 - faker.factory - DEBUG - Provider `faker.providers.ssn` has been localized to `en_US`.
+2025-08-16 16:18:03,024 - faker.factory - DEBUG - Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-08-16 16:18:03,026 - tests.test_hardware - INFO - Hardware check passed: Hardware ready: ['ACS ACR122 0']
+2025-08-16 16:18:03,026 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:18:03,027 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:18:03,030 - readers - INFO - Detected 1 readers
+2025-08-16 16:18:03,031 - card_manager - INFO - Card manager initialized
+2025-08-16 16:18:03,033 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:18:03,037 - readers - INFO - Detected 1 readers
+2025-08-16 16:18:03,038 - tests.test_hardware - INFO - Available readers: ['ACS ACR122 0']
+2025-08-16 16:18:03,039 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:03,040 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:03,048 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:03,049 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:18:03,051 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:03,053 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:03,069 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:03,069 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:18:03,070 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:18:03,070 - emv_card - DEBUG - EMV card initialized
+2025-08-16 16:18:03,070 - tests.test_hardware - INFO - Found 0 applications
+2025-08-16 16:18:03,100 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:18:03,101 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:03,101 - tests.test_hardware - INFO - PSE selection successful: 28 bytes
+2025-08-16 16:18:03,103 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:03,105 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:03,118 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:03,132 - readers.PCSCCardReader - DEBUG - APDU >> 80A80000028300
+2025-08-16 16:18:03,134 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:18:03,134 - tests.test_hardware - WARNING - GPO failed: 6D00
+2025-08-16 16:18:03,152 - readers.PCSCCardReader - DEBUG - APDU >> 00B2010C00
+2025-08-16 16:18:03,152 - readers.PCSCCardReader - DEBUG - APDU << 702661244F07A0000000031010500A56495341204445424954870101730A5F5502555342034031639000
+2025-08-16 16:18:03,152 - tests.test_hardware - INFO - READ RECORD SFI1 Rec1: 40 bytes
+2025-08-16 16:18:03,164 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:18:03,164 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:18:03,191 - readers.PCSCCardReader - DEBUG - APDU >> 00B2020C00
+2025-08-16 16:18:03,191 - readers.PCSCCardReader - DEBUG - APDU << 702461224F07A000000098084050085553204445424954870102730A5F5502555342034031639000
+2025-08-16 16:18:03,191 - tests.test_hardware - INFO - READ RECORD SFI1 Rec2: 38 bytes
+2025-08-16 16:18:03,191 - tag_dictionary - INFO - Loaded 248 tag definitions
+2025-08-16 16:18:03,191 - tests.test_hardware - INFO -   Parsed 1 TLV tags
+2025-08-16 16:18:03,207 - readers.PCSCCardReader - DEBUG - APDU >> 00B2030C00
+2025-08-16 16:18:03,207 - readers.PCSCCardReader - DEBUG - APDU << 6A83
+2025-08-16 16:18:03,221 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:18:03,221 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,234 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021400
+2025-08-16 16:18:03,235 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,248 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031400
+2025-08-16 16:18:03,248 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,257 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041400
+2025-08-16 16:18:03,257 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,275 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011C00
+2025-08-16 16:18:03,275 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,289 - readers.PCSCCardReader - DEBUG - APDU >> 00B2021C00
+2025-08-16 16:18:03,289 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,302 - readers.PCSCCardReader - DEBUG - APDU >> 00B2031C00
+2025-08-16 16:18:03,302 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,315 - readers.PCSCCardReader - DEBUG - APDU >> 00B2041C00
+2025-08-16 16:18:03,317 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,324 - readers.PCSCCardReader - DEBUG - APDU >> 00B2012400
+2025-08-16 16:18:03,324 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,339 - readers.PCSCCardReader - DEBUG - APDU >> 00B2022400
+2025-08-16 16:18:03,339 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,357 - readers.PCSCCardReader - DEBUG - APDU >> 00B2032400
+2025-08-16 16:18:03,357 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,371 - readers.PCSCCardReader - DEBUG - APDU >> 00B2042400
+2025-08-16 16:18:03,371 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:03,373 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:03,375 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:03,385 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:03,401 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:18:03,402 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:18:03,402 - tests.test_hardware - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:18:03,404 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:03,406 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:03,418 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:03,435 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:18:03,436 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:18:03,436 - tests.test_hardware - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:18:03,437 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:03,439 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:03,448 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:03,450 - tests.test_hardware - INFO - Operation 1/5: 2/2 passed
+2025-08-16 16:18:03,966 - tests.test_hardware - INFO - Operation 2/5: 2/2 passed
+2025-08-16 16:18:04,482 - tests.test_hardware - INFO - Operation 3/5: 2/2 passed
+2025-08-16 16:18:04,999 - tests.test_hardware - INFO - Operation 4/5: 2/2 passed
+2025-08-16 16:18:05,515 - tests.test_hardware - INFO - Operation 5/5: 2/2 passed
+2025-08-16 16:18:06,031 - tests.test_hardware - INFO - Success rate: 100.0%
+2025-08-16 16:18:06,032 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,036 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,049 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,049 - tests.test_hardware - INFO - Card ATR: 3B888001534C4A26312342113B
+2025-08-16 16:18:06,049 - tests.test_hardware - INFO - ATR length: 13 bytes
+2025-08-16 16:18:06,049 - tests.test_hardware - INFO - Card manager integration test completed
+2025-08-16 16:18:06,049 - tests.test_hardware - INFO - Basic ATR reading and validation successful
+2025-08-16 16:18:06,051 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,051 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,119 - __main__ - INFO - Tests passed in tests/test_hardware.py
+2025-08-16 16:18:06,268 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:18:06,272 - readers - INFO - Detected 1 readers
+2025-08-16 16:18:06,274 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,288 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,288 - tests.test_emv_functionality - INFO - Transaction data created: TEST001
+2025-08-16 16:18:06,288 - tests.test_emv_functionality - INFO - Amount: $10.00
+2025-08-16 16:18:06,289 - tests.test_emv_functionality - INFO - Currency: 840
+2025-08-16 16:18:06,289 - tests.test_emv_functionality - INFO - Transaction initialization successful
+2025-08-16 16:18:06,290 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,292 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,301 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,331 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:18:06,332 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:06,333 - tests.test_emv_functionality - INFO - PSE selection successful
+2025-08-16 16:18:06,333 - tests.test_emv_functionality - INFO - Application selection test completed
+2025-08-16 16:18:06,335 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,335 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,350 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,367 - readers.PCSCCardReader - DEBUG - APDU >> 00880000080000000000000000
+2025-08-16 16:18:06,367 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:18:06,367 - tests.test_emv_functionality - INFO - INTERNAL AUTHENTICATE failed: 6D00
+2025-08-16 16:18:06,369 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,372 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,384 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,403 - readers.PCSCCardReader - DEBUG - APDU >> 80AE80000E0000001000084008400000000000
+2025-08-16 16:18:06,403 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:18:06,403 - tests.test_emv_functionality - WARNING - GENERATE AC failed: 6D00
+2025-08-16 16:18:06,405 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,406 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,417 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,418 - tests.test_emv_functionality - INFO - Testing basic EMV command sequence
+2025-08-16 16:18:06,447 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E4444463031
+2025-08-16 16:18:06,448 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:06,449 - tests.test_emv_functionality - INFO - Step 1 - PSE Select: 9000
+2025-08-16 16:18:06,462 - readers.PCSCCardReader - DEBUG - APDU >> 00B2011400
+2025-08-16 16:18:06,462 - readers.PCSCCardReader - DEBUG - APDU << 6A86
+2025-08-16 16:18:06,462 - tests.test_emv_functionality - INFO - Step 2 - Read Record: 6A86
+2025-08-16 16:18:06,474 - readers.PCSCCardReader - DEBUG - APDU >> 80CA9F1300
+2025-08-16 16:18:06,474 - readers.PCSCCardReader - DEBUG - APDU << 6D00
+2025-08-16 16:18:06,474 - tests.test_emv_functionality - INFO - Step 3 - Get Data: 6D00
+2025-08-16 16:18:06,474 - tests.test_emv_functionality - INFO - Basic transaction flow test completed
+2025-08-16 16:18:06,474 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,474 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:06,534 - __main__ - INFO - Tests passed in tests/test_emv_functionality.py
+2025-08-16 16:18:06,681 - readers - INFO - Reader manager initialized with capabilities: {'pcsc': True, 'serial': True, 'nfc': True}
+2025-08-16 16:18:06,685 - readers - INFO - Detected 1 readers
+2025-08-16 16:18:06,688 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:06,701 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:06,733 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:06,733 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:06,733 - tests.test_security_research - DEBUG - Iteration 0: 0.031810s, Status: 9000
+2025-08-16 16:18:06,866 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:06,866 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:06,866 - tests.test_security_research - DEBUG - Iteration 1: 0.032369s, Status: 9000
+2025-08-16 16:18:06,999 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:06,999 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:06,999 - tests.test_security_research - DEBUG - Iteration 2: 0.031793s, Status: 9000
+2025-08-16 16:18:07,132 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,132 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,132 - tests.test_security_research - DEBUG - Iteration 3: 0.031927s, Status: 9000
+2025-08-16 16:18:07,265 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,265 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,265 - tests.test_security_research - DEBUG - Iteration 4: 0.031848s, Status: 9000
+2025-08-16 16:18:07,399 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,399 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,399 - tests.test_security_research - DEBUG - Iteration 5: 0.031752s, Status: 9000
+2025-08-16 16:18:07,532 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,532 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,532 - tests.test_security_research - DEBUG - Iteration 6: 0.032443s, Status: 9000
+2025-08-16 16:18:07,666 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,666 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,666 - tests.test_security_research - DEBUG - Iteration 7: 0.031728s, Status: 9000
+2025-08-16 16:18:07,800 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,800 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,800 - tests.test_security_research - DEBUG - Iteration 8: 0.031767s, Status: 9000
+2025-08-16 16:18:07,932 - readers.PCSCCardReader - DEBUG - APDU >> 00A404000E315041592E5359532E444446303100
+2025-08-16 16:18:07,932 - readers.PCSCCardReader - DEBUG - APDU << 6F1A840E315041592E5359532E4444463031A5088801015F2D02656E9000
+2025-08-16 16:18:07,932 - tests.test_security_research - DEBUG - Iteration 9: 0.031795s, Status: 9000
+2025-08-16 16:18:08,049 - tests.test_security_research - INFO - Timing analysis results:
+2025-08-16 16:18:08,049 - tests.test_security_research - INFO -   Average: 0.031923s
+2025-08-16 16:18:08,049 - tests.test_security_research - INFO -   Min: 0.031728s
+2025-08-16 16:18:08,049 - tests.test_security_research - INFO -   Max: 0.032443s
+2025-08-16 16:18:08,049 - tests.test_security_research - INFO -   Variation: 0.000715s
+2025-08-16 16:18:08,054 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:08,054 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:08,065 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:08,067 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:08,067 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:08,083 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:08,085 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:08,085 - readers.PCSCCardReader - INFO - Connected to PC/SC reader: ACS ACR122 0
+2025-08-16 16:18:08,100 - readers.PCSCCardReader - INFO - Card inserted in ACS ACR122 0, ATR: 3B 88 80 01 53 4C 4A 26 31 23 42 11 3B
+2025-08-16 16:18:08,101 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:08,101 - tests.test_security_research - INFO - Chameleon Mini test: False
+2025-08-16 16:18:08,101 - tests.test_security_research - INFO - Chameleon commands available: 7
+2025-08-16 16:18:08,101 - tests.test_security_research - INFO - Configuration validation: True
+2025-08-16 16:18:08,101 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:08,101 - readers.PCSCCardReader - INFO - Disconnected from reader: ACS ACR122 0
+2025-08-16 16:18:08,182 - __main__ - INFO - Tests passed in tests/test_security_research.py
+2025-08-16 16:18:08,182 - __main__ - INFO - All tests completed successfully

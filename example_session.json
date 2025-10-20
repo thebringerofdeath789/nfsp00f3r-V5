@@ -1,0 +1,62 @@
+{
+  "session_id": "example_session_001",
+  "capture_timestamp": 1723851600.0,
+  "pan": "4111111111111111",
+  "atc_start": "0001",
+  "exchanges": [
+    {
+      "timestamp": 1723851601.0,
+      "command": "00A4040007A0000000031010",
+      "response": "6F1C840EA0000000031010A50A50084245424954501087010110",
+      "sw1": 144,
+      "sw2": 0,
+      "context": {
+        "apdu_type": "select_aid",
+        "aid": "A0000000031010",
+        "application_name": "DEBIT"
+      }
+    },
+    {
+      "timestamp": 1723851602.0,
+      "command": "80A8000002830000",
+      "response": "7781959F108705A03A800000009F2608C5D3F4A8B2A1D4909F360200019F4C087FA7F20F12A8D6C565F2A020840820250008E000000000000001A031E031F03950528800080009A032408169C01005F2A020840",
+      "sw1": 144,
+      "sw2": 0,
+      "context": {
+        "apdu_type": "get_processing_options",
+        "pdol": "830000"
+      }
+    },
+    {
+      "timestamp": 1723851603.0,
+      "command": "00B20C1C00",
+      "response": "70815F5A0847111111111111111F5F2D02656E9F0702FF009F080200029F0D05D8609CA8009F0E0500109800009F0F05D86098F8009F420208405F280208407F4C0847111111111111118C159F02069F03069F1A0295055F2A029A039C019F37048D0A8A029F02069F03069F1A029F3704",
+      "sw1": 144,
+      "sw2": 0,
+      "context": {
+        "apdu_type": "read_record",
+        "sfi": 1,
+        "record": 4
+      }
+    },
+    {
+      "timestamp": 1723851604.0,
+      "command": "80AE8000230000000001000000000000084000000008408241609000000000000000000123456789",
+      "response": "7A25829400019F2701809F360200019F4C08BC123456789ABCDE901029F1009060A03A4A000",
+      "sw1": 144,
+      "sw2": 0,
+      "context": {
+        "apdu_type": "generate_ac",
+        "ac_type": "ARQC",
+        "amount": "000000000100",
+        "unpredictable_number": "12345678"
+      }
+    }
+  ],
+  "metadata": {
+    "capture_method": "real_card",
+    "reader_type": "ACS ACR122",
+    "terminal_type": "EMV",
+    "notes": "Example captured session for replay testing"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "database_version": "1.0",
+  "creation_timestamp": 1723851600.0,
+  "total_entries": 5,
+  "entries": [
+    {
+      "un": "12345678",
+      "atc": "0001",
+      "arqc": "BC123456789ABCDE",
+      "tc": "DEF9876543210ABC",
+      "aac": null,
+      "amount": "000000000100",
+      "currency": "0840",
+      "timestamp": 1723851604.0
+    },
+    {
+      "un": "87654321",
+      "atc": "0002",
+      "arqc": "AB9876543210CDEF",
+      "tc": "123456789ABCDEF0",
+      "aac": null,
+      "amount": "000000001000",
+      "currency": "0840",
+      "timestamp": 1723851700.0
+    },
+    {
+      "un": "ABCDEF12",
+      "atc": "0003",
+      "arqc": "456789ABCDEF1234",
+      "tc": null,
+      "aac": "FEDCBA0987654321",
+      "amount": "000000005000",
+      "currency": "0840",
+      "timestamp": 1723851800.0
+    },
+    {
+      "un": "FEDCBA98",
+      "atc": "0004",
+      "arqc": "789ABCDEF1234567",
+      "tc": "ABCDEF1234567890",
+      "aac": null,
+      "amount": "000000002500",
+      "currency": "0840",
+      "timestamp": 1723851900.0
+    },
+    {
+      "un": "13579BDF",
+      "atc": "0005",
+      "arqc": "CDEF123456789ABC",
+      "tc": "56789ABCDEF01234",
+      "aac": null,
+      "amount": "000000010000",
+      "currency": "0840",
+      "timestamp": 1723852000.0
+    }
+  ],
+  "metadata": {
+    "source": "multi_card_collection",
+    "card_types": ["Visa", "MasterCard"],
+    "collection_method": "automated_sniffing",
+    "notes": "Pre-computed cryptograms for various UNs and transaction amounts"
+  }
+}

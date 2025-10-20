@@ -1,0 +1,21 @@
+{
+  "timestamp": 1755387692.9516084,
+  "amount": 7500,
+  "currency_code": "840",
+  "transaction_type": "00",
+  "arqc": "FF7A6316FD2E5706",
+  "tc": "FF7A6316FD2E5706",
+  "transaction_data": {
+    "amount": 7500,
+    "currency_code": "840",
+    "transaction_type": "00",
+    "terminal_country_code": "0840",
+    "transaction_date": "250816",
+    "transaction_time": "164132",
+    "unpredictable_number": "09237DFB",
+    "application_transaction_counter": "0001",
+    "terminal_verification_results": "0000000000",
+    "cryptogram_information_data": "40"
+  },
+  "applications": 0
+}

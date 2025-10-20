@@ -1,0 +1,51 @@
+emv.html
+
+# Ignore vendored gradle distributions and large gradle zips
+android-app/gradle-dist/
+android-app/gradle-*.zip
+
+# Build directories
+android_companion/build/
+android_companion/android-app/build/
+android_companion/android-app/app/build/
+android_companion/android-app/.gradle/
+
+# Android specific
+*.apk
+*.ap_
+*.dex
+local.properties
+.gradle/
+gradle.properties
+!gradle-wrapper.properties
+
+# Gradle wrapper artifacts
+# The Android companion intentionally vendors the Gradle wrapper and
+# distribution to enable reproducible offline builds for developers and CI.
+# The following files are tracked in the repository by maintainers:
+android_companion/android-app/gradle/wrapper/gradle-wrapper.jar
+android_companion/android-app/gradle/wrapper/gradle-wrapper.properties
+android_companion/android-app/gradlew
+android_companion/android-app/gradlew.bat
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+docs/emv.html
+android_companion/.vscode/
+android_companion/.github/
+android_companion/copilot-instructions.md
+android_companion/LOADER.md
+__pycache__/
+*.pyc
+logs/
+.venv/
+.pytest_cache/
+gradle-8.5-bin.zip
+docs./.pytest_cache/
+docs/.venv/
+*.md
+.github/
+android-app/gradle-dist/
+android-app/gradle-*.zip

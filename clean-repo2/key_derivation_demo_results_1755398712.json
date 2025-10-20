@@ -1,0 +1,129 @@
+[
+  {
+    "scenario_name": "Same Issuer Analysis",
+    "cards_analyzed": 3,
+    "analysis_results": {
+      "total_cards": 3,
+      "cards_with_pins": 3,
+      "derivation_attempts": {
+        "emv_option_a": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "emv_option_b": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "common_master_key": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "pin_based_derivation": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "statistical_analysis": {
+          "success_probability": 0.3333333333333333,
+          "pattern_matches": [
+            "Low cryptogram entropy detected"
+          ],
+          "confidence_score": 0.19999999999999998
+        }
+      },
+      "pattern_analysis": {},
+      "recommendations": []
+    },
+    "insights": [
+      "\u2705 SAME ISSUER SECURITY: No obvious master key sharing detected"
+    ],
+    "timestamp": 1755398709.5242014
+  },
+  {
+    "scenario_name": "Mixed Issuer Analysis",
+    "cards_analyzed": 3,
+    "analysis_results": {
+      "total_cards": 3,
+      "cards_with_pins": 3,
+      "derivation_attempts": {
+        "emv_option_a": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "emv_option_b": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "common_master_key": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "pin_based_derivation": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "statistical_analysis": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        }
+      },
+      "pattern_analysis": {},
+      "recommendations": []
+    },
+    "insights": [
+      "\u2705 ISSUER ISOLATION: Different issuers show distinct patterns"
+    ],
+    "timestamp": 1755398710.549598
+  },
+  {
+    "scenario_name": "PIN-based Vulnerability Analysis",
+    "cards_analyzed": 3,
+    "analysis_results": {
+      "total_cards": 3,
+      "cards_with_pins": 3,
+      "derivation_attempts": {
+        "emv_option_a": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "emv_option_b": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "common_master_key": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "pin_based_derivation": {
+          "success_probability": 0.0,
+          "pattern_matches": [],
+          "confidence_score": 0.0
+        },
+        "statistical_analysis": {
+          "success_probability": 0.3333333333333333,
+          "pattern_matches": [
+            "Low cryptogram entropy detected"
+          ],
+          "confidence_score": 0.19999999999999998
+        }
+      },
+      "pattern_analysis": {},
+      "recommendations": []
+    },
+    "insights": [
+      "\ud83d\udd12 PIN SECURITY: PIN-based attacks show low success rate"
+    ],
+    "timestamp": 1755398711.5832193
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "card_id": null,
+  "reader_name": "Unknown",
+  "insertion_time": null,
+  "pan": null,
+  "pan_sequence_number": null,
+  "cardholder_name": null,
+  "expiry_date": null,
+  "effective_date": null,
+  "service_code": null,
+  "track1_data": null,
+  "track2_data": null,
+  "track3_data": null,
+  "track2_equivalent": null,
+  "discretionary_data": null,
+  "cvv": null,
+  "cvv2": null,
+  "cvc3": null,
+  "pin": null,
+  "pin_try_counter": 3,
+  "applications": {},
+  "current_application": null,
+  "tlv_data": {
+    "6F": {
+      "84": "315041592E5359532E4444463031",
+      "A5": {
+        "88": "01",
+        "5F2D": "656E"
+      }
+    }
+  },
+  "apdu_log": [
+    {
+      "timestamp": "2025-08-16T16:41:32.456559",
+      "command": "00A404000E315041592E5359532E444446303100",
+      "response": "6F1A840E315041592E5359532E4444463031A5088801015F2D02656E",
+      "sw1": 144,
+      "sw2": 0,
+      "status": "Success",
+      "parsed_data": {
+        "command_type": "SELECT",
+        "tlv": {
+          "6F": {
+            "84": 
